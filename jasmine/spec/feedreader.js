@@ -42,13 +42,13 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-    });
           it('have name',function(){
             allFeeds.forEach(function(feed){
                 expect(feed.name).toBeDefined();
                 expect(feed.name.length).not.toBe(0);
             });
           });
+        });
 
     /* Write a new test suite named "The menu" */
     describe('The menu', function(){
@@ -89,7 +89,7 @@ $(function() {
          });
 
          it('has at least one entry',function(done){
-                expect($('.entry').length).toBeGreaterThan(0);
+                expect($('.feed .entry').length).toBeGreaterThan(0);
                 done();
          });
        });
